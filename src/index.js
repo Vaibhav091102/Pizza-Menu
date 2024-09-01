@@ -113,8 +113,6 @@ function Menu() {
 function Pizza({ pizzaObj }) {
   console.log(pizzaObj);
 
-  // if (pizzaObj.soldOut) return null;
-
   return (
     <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
       <img src={pizzaObj.photoName} alt={pizzaObj.name} />
@@ -173,13 +171,9 @@ function Order({ closeHour, openHour }) {
   );
 }
 
-// React v18
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
-// React before 18
-// ReactDOM.render(<App />, document.getElementById("root"));
